@@ -59,3 +59,46 @@ q:before, q:after {
 table {
   border-spacing: 0;
 }
+/*
+.container{
+  justify-content: center;
+  border: 1px solid black;
+  display: flex;
+  padding-top: 10px;
+}*/
+
+.container{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 10px;
+}
+form {
+  justify-content: center;
+  border: 1px solid gray;
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  display:inline-block
+
+}
+
+button{
+  width: 200px;
+  border-color: cornflowerblue;
+  background-color: white;
+}
+ input{
+  width: 200px;
+ }
+input:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2)
+}
+button:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2)
+  
+}
