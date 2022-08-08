@@ -1,11 +1,36 @@
+import { useNavigate } from 'react-router'
+import { client } from '../../service/client'
+
 export const Login = () => {
+  let saveLogin = ''
+  let password = ''
+  const navigate = useNavigate()
+
+  const handlerClick = (e) => {
+    client.post('/login', { saveLogin, password }).then(function (response) {
+      navigate('/movies')
+      console.log(response.data)
+    })
+
+    // client.get('/movies').then(function (response) {
+    // console.log(response.data)
+    // })
+  }
+  const handlerChangeLogin = (event) => {
+    saveLogin = event.target.value
+  }
+
+  const handlerChangePassword = (event) => {
+    password = event.target.value
+    // console.log('mudou senha')
+  }
   return (
 <section className="container">
   <form>
-    <label>Login</label><input type="email" placeholder="email"></input><br></br>
-    <label>Password</label><input type="password" placeholder="senha"></input>
-    <p>esqueceu sua senha?</p><br></br>
-    <button onClick="oncClick" >Entrar</button>
+    <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" ></input><br></br>
+    <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha"></input>
+    <p><u>esqueceu sua senha?</u></p><br></br>
+    <button onClick={handlerClick} type="button">Entrar</button>
   </form>
 </section>
 

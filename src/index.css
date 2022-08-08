@@ -79,8 +79,8 @@ form {
   width: 300px;
   height: 400px;
   padding: 10px;
-  display:inline-block
-
+  display:inline-block;
+  background-color: #ffb6c1;
 }
 
 button{
@@ -101,4 +101,24 @@ button:hover{
     -ms-transform: scale(1.2);
     transform: scale(1.2)
   
+}
+.listMovies h2{
+  justify-content: center;
+  background-color:#C0C0C0;
+  color:black;
+  display: flex;
+  width: 100%;
+}
+
+figure{
+  background-color: #ffb6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 30px;
+  height: 50%;
+}
+li{
+  justify-content: center;
+  align-items: center;
 }
