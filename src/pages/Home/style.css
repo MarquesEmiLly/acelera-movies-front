@@ -1,9 +1,9 @@
-.listMovies h2{
+.listMovies {
   justify-content: center;
-  background-color:orange;
-  color:black;
+  background-color: pink;
   display: flex;
   width: 100%;
+  padding: 30px;
 }
 li{
   justify-content: center;
