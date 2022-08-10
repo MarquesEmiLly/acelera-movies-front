@@ -1,0 +1,21 @@
+.listMovies h2{
+  justify-content: center;
+  background-color:orange;
+  color:black;
+  display: flex;
+  width: 100%;
+}
+li{
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*figure{
+  background-color: #ffb6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 30px;
+  height: 50%;
+}*/
