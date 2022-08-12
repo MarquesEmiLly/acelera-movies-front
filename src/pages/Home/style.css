@@ -5,17 +5,31 @@
   width: 100%;
   padding: 30px;
 }
-li{
-  justify-content: center;
+
+ul {
+  display: grid;
+  justify-content: space-evenly;
   align-items: center;
+  padding: 5px;
 }
 
+li {
+  padding: 10px;
+}
 
-/*figure{
-  background-color: #ffb6c1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 30px;
-  height: 50%;
-}*/
+h1 {
+  width: 100px;
+  background-color: #D3D3D3
+}
+
+.paginaHome {
+  display: inline-flex;
+  justify-content: space-around;
+
+}
+
+.listMovies figure{
+background-color:orange ;
+  left: 100%;
+  float:left
+}

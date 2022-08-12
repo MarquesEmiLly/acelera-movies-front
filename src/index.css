@@ -59,13 +59,7 @@ q:before, q:after {
 table {
   border-spacing: 0;
 }
-/*
-.container{
-  justify-content: center;
-  border: 1px solid black;
-  display: flex;
-  padding-top: 10px;
-}*/
+
 
 .container{
   display: flex;
