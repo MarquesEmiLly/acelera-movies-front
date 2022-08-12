@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { client } from '../../service/client'
 import './style.css'
+
 export const Home = () => {
   const [movie, setMovie] = useState([])
   useEffect(() => {
@@ -14,7 +15,7 @@ export const Home = () => {
     <div>
       <nav>
         <h1>Hello User!</h1>
-        <Link to={'modal'}>Add Movie</Link>
+        <Link to={'/modal'}>Add Movie</Link>
       </nav>
       <section className="listMovies">
         <h2>All Movies</h2>

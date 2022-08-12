@@ -4,6 +4,8 @@
   display: flex;
   width: 100%;
   padding: 30px;
+  box-shadow: 0 0 1em purple;
+
 }
 
 ul {
@@ -20,16 +22,4 @@ li {
 h1 {
   width: 100px;
   background-color: #D3D3D3
-}
-
-.paginaHome {
-  display: inline-flex;
-  justify-content: space-around;
-
-}
-
-.listMovies figure{
-background-color:orange ;
-  left: 100%;
-  float:left
 }
