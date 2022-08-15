@@ -9,18 +9,15 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  border:1px solid;
+  border: 1px solid;
   padding: 10px;
   border-radius: 3px;
   color: white;
   background-color: rgb(5, 102, 222);
 }
 
-h2 {
-  border: 1px solid;
-}
 
-.mdoal h1 h2 p {
+.mdoal h1  p {
   margin: 0;
   margin-bottom: 10px;
 }
@@ -35,4 +32,17 @@ h2 {
   height: 100%;
   overflow: auto;
   padding-top: 100px;
+}
+
+.close{
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  color:red;
+  font-weight: 900;
+  font-size: 20px;
+  cursor:pointer;
+}
+.close:hover{
+color:blue;
 }

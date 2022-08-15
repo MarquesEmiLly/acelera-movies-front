@@ -15,7 +15,7 @@ export const Home = () => {
     <div>
       <nav>
         <h1>Hello User!</h1>
-        <Link to={'/modal'}>Add Movie</Link>
+       <h1><Link to={'/modal'}>Add Movie</Link> </h1>
       </nav>
       <section className="listMovies">
         <h2>All Movies</h2>

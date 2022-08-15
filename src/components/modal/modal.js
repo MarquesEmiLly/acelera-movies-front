@@ -1,18 +1,25 @@
+import { useState } from 'react'
 import './style.css'
 export const Modal = () => {
+  const [toggle, setToggle] = useState(true)
+  const handlerClick = () => {
+    setToggle(!toggle)
+  }
   return (
     <>
-      <button>CLique aqui!</button>
-      <div className="modal-container">
-        <section className="modal">
-          <header>
-            <h2>BEm vinda a modal</h2>
-            <button className="close">x</button>
-          </header>
+      <button onClick={handlerClick}>Abrir Modal!</button>
+      {toggle && (
+        <div className="modal-container">
+          <section className="modal">
+            <header>
+              <h2>MODAL DA EMILLY</h2>
+              <button onClick={handlerClick} className="close">x</button>
+            </header>
 
-          <p>eu sou a Emii</p>
-        </section>
-      </div>
+            <p>eu sou a Emii</p>
+          </section>
+        </div>)
+      }
     </>
   )
 }

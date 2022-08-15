@@ -5,6 +5,7 @@
   width: 100%;
   padding: 30px;
   box-shadow: 0 0 1em purple;
+  border: 30px;
 
 }
 
@@ -20,11 +21,11 @@ li {
 }
 
 h1 {
-  width: 100px;
-  background-color: #D3D3D3
+  width: 200px;
+  padding-block-end: 15px;
 }
 
 nav {
   width: 100%;
-  
+  padding-top: 30px;
 }
