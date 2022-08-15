@@ -62,38 +62,4 @@ table {
 }
 
 
-.container{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  padding-top: 10px;
-}
-form {
-  justify-content: center;
-  border: 1px solid gray;
-  width: 300px;
-  height: 400px;
-  padding: 10px;
-  display:inline-block;
-  background-color: #ffb6c1;
-}
 
-button{
-  width: 200px;
-  border-color: cornflowerblue;
-  background-color: white;
-}
- input{
-  width: 200px;
- }
-input:hover{
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2)
-}
-button:hover{
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2)
-  
-}

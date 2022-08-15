@@ -2,6 +2,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { Login } from './pages/Login/cadastro'
 import { Home } from './pages/Home/home'
 import { Movies } from './pages/Movies/movies'
+// import { ModalForm } from './pages/Home/modal'
 import { Modal } from './components/modal/modal'
 export const App = () => {
   return (

@@ -1,8 +1,20 @@
+.resume {
+  padding-top: 10px;
+  width: 300px;
+  border-color: lightgrey;
+
+}
+input{
+  padding-top: 10px;;
+}
+
+
 .modal {
   border: 1px solid black;
   border-radius: 3px;
   margin: auto 0;
-  box-shadow: 1px 3px 10px -3px black
+  box-shadow: 1px 3px 10px -3px black;
+  justify-content: center;
 }
 
 .modal header {
@@ -17,7 +29,7 @@
 }
 
 
-.mdoal h1  p {
+.mdoal h1 p {
   margin: 0;
   margin-bottom: 10px;
 }
@@ -34,15 +46,20 @@
   padding-top: 100px;
 }
 
-.close{
+.close {
   background-color: transparent;
   border: 0;
   padding: 0;
-  color:red;
+  color: red;
   font-weight: 900;
   font-size: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
-.close:hover{
-color:blue;
+
+.close:hover {
+  color: blue;
+}
+
+nav {
+  padding-top: 30px;
 }

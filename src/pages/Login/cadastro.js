@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router'
 import { client } from '../../service/client'
+import '../Login/style.css'
 
 export const Login = () => {
   let saveLogin = ''
@@ -26,9 +27,9 @@ export const Login = () => {
   }
   return (
 <section className="container">
-  <form>
-    <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" ></input><br></br>
-    <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha"></input>
+  <form className='formLogin'>
+    <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" className='inputLogin' ></input><br></br>
+    <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha" className='inputLogin'></input>
     <p><u>esqueceu sua senha?</u></p><br></br>
     <button onClick={handlerClick} type="button">Entrar</button>
   </form>
