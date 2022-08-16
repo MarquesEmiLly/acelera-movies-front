@@ -5,6 +5,10 @@ export const Modal = () => {
   let subtitle = ''
   let resume = ''
   let data = ''
+  let imagem = ''
+  let diretor = ''
+  let escritor = ''
+  let classificacao = ''
   const [toggle, setToggle] = useState(false)
   const handlerClick = () => {
     setToggle(!toggle)
@@ -21,15 +25,27 @@ export const Modal = () => {
   const handleChangeData = (event) => {
     data = event.target.value
   }
+  const handleChangeImagem = (event) => {
+    imagem = event.target.value
+  }
+  const handleChangeDiretor = (event) => {
+    diretor = event.target.value
+  }
+  const handleChangeEscritor = (event) => {
+    escritor = event.target.value
+  }
+  const handleChangeClassific = (event) => {
+    classificacao = event.target.value
+  }
   const submit = () => {
     alert(`SALVANDO O NOVO FILME: ${title}`)
-    console.log(subtitle, resume, data)
+    console.log(subtitle, resume, data, imagem, diretor, escritor, classificacao)
   }
 
   return (
     <div className="tela">
       <nav>
-        <button onClick={handlerClick}>Abrir Modal!</button>
+        <button onClick={handlerClick} className='abrir'>Abrir Modal!</button>
       </nav>
       {toggle && (
         <div className="modal-container">
@@ -43,20 +59,20 @@ export const Modal = () => {
               <input type="text" placeholder='subtitle' onChange={handleChangeSubtitle} />
             </form>
             <br></br>
-            <input type="text" placeholder='Resume' className='resume' onChange={handleChangeResume}/>
+            <input type="text" placeholder='Resume' className='resume' onChange={handleChangeResume} />
             <br></br>
             <form className='form2'>
-              <input type="text" placeholder='data' onChange={handleChangeData } />
-              <input type="text" placeholder='imagem' />
+              <input type="text" placeholder='data' onChange={handleChangeData} />
+              <input type="text" placeholder='imagem' onChange={handleChangeImagem} />
             </form>
             <br></br>
             <form className='form2'>
-              <input type="text" placeholder='diretor' />
-              <input type="text" placeholder='escritor' />
+              <input type="text" placeholder='diretor' onChange={handleChangeDiretor} />
+              <input type="text" placeholder='escritor' onChange={handleChangeEscritor} />
             </form>
             <br></br>
             <form className='form2'>
-              <input type="text" placeholder='classificação' />
+              <input type="text" placeholder='classificação' onChange={handleChangeClassific}/>
               <input type="text" placeholder='studio' />
             </form>
             <input type="text" placeholder='stars' className='resume' />
