@@ -1,20 +1,20 @@
-.resume {
-  margin-top:10px;
-  padding-left:200px;
-  border-color: lightgrey;
-
+*{
+  padding:0;
+  margin: 0;
 }
-
 .modal input{
   margin-top: 10px;
   padding:20px;
 }
+
 .modal {
+  width: 50%;
   border: 1px solid black;
   border-radius: 3px;
   margin: auto 0;
   box-shadow: 1px 3px 10px -3px black;
   display: block;
+
 }
 
 .modal header {
@@ -35,13 +35,14 @@
 }
 
 .modal-container {
+  width: 100%;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
   height: 100%;
   overflow: auto;
-  padding-top: 100px;
+justify-content: right
 }
 
 .close {
@@ -59,9 +60,7 @@
 }
 
 nav {
-  padding-top: 30px;
-  justify-items: center;
-  justify-content: center;
+  margin-top: 20%;
 }
  .enviar{
   width: 100px;
@@ -69,10 +68,20 @@ nav {
   color:black;
   border-radius: 15px;
 }
+button{
+  width: 10%;
+}
 
 button:hover{
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2)
+
+}
+
+.resume {
+  margin-top:10px;
+  padding-left:200px;
+  border-color: lightgrey;
 
 }

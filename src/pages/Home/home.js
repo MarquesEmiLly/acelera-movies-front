@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Modal } from '../../components/modal/modal'
 import { client } from '../../service/client'
 import './style.css'
 
@@ -12,13 +13,13 @@ export const Home = () => {
   }, [])
 
   return (
-    <div>
-      <nav>
-        <h1>Hello User!</h1>
-       <h1><Link to={'/modal'}>Add Movie</Link> </h1>
-      </nav>
+    <div className='container'>
+      <div className='navegador'>
+        <div className='title'> <h1>Hello User!</h1> </div>
+        <div className='title2'> <h2>All Movies</h2> </div>
+      </div>
+      <Modal />
       <section className="listMovies">
-        <h2>All Movies</h2>
         <ul>
           {movie.map((movie, index) => (
             <li key={index}>
@@ -34,7 +35,6 @@ export const Home = () => {
 
         </ul>
       </section>
-
     </div>
   )
 }

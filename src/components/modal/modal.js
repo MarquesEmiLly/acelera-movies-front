@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import './style.css'
 export const Modal = () => {
@@ -9,6 +10,8 @@ export const Modal = () => {
   let diretor = ''
   let escritor = ''
   let classificacao = ''
+  let studio = ''
+  let stars = ''
   const [toggle, setToggle] = useState(false)
   const handlerClick = () => {
     setToggle(!toggle)
@@ -37,9 +40,16 @@ export const Modal = () => {
   const handleChangeClassific = (event) => {
     classificacao = event.target.value
   }
+
+  const handleChangeStars = (event) => {
+    stars = event.target.value
+  }
+  const handleChangeStudio = (event) => {
+    studio = event.target.value
+  }
   const submit = () => {
     alert(`SALVANDO O NOVO FILME: ${title}`)
-    console.log(subtitle, resume, data, imagem, diretor, escritor, classificacao)
+    console.log(subtitle, resume, data, imagem, diretor, escritor, classificacao, studio, stars)
   }
 
   return (
@@ -72,10 +82,10 @@ export const Modal = () => {
             </form>
             <br></br>
             <form className='form2'>
-              <input type="text" placeholder='classificação' onChange={handleChangeClassific}/>
-              <input type="text" placeholder='studio' />
+              <input type="text" placeholder='classificação' onChange={handleChangeClassific} />
+              <input type="text" placeholder='studio' onChange={handleChangeStudio} />
             </form>
-            <input type="text" placeholder='stars' className='resume' />
+            <input type="text" placeholder='stars' className='resume' onChange={handleChangeStars} />
             <button onClick={submit} className='enviar'>enviar</button>
           </section>
         </div>)
