@@ -13,28 +13,30 @@ export const Home = () => {
   }, [])
 
   return (
-    <div className='container'>
-      <div className='navegador'>
-        <div className='title'> <h1>Hello User!</h1> </div>
-        <div className='title2'> <h2>All Movies</h2> </div>
-      </div>
-      <Modal />
-      <section className="listMovies">
-        <ul>
-          {movie.map((movie, index) => (
-            <li key={index}>
-              <figure>
-                {movie.image}
-              </figure>
-              <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-              <span>{movie.releaseDate}</span>
-              <h3>{movie.resume}</h3>
-            </li>
-          )
-          )}
+    <div className='container-pai'>
+      <div className='container'>
+        <nav className='navegacao'>
+          <div className='user'><h1>Hello User!</h1> </div>
+          <div className='movies'> <h2>All Movies</h2> </div>
+        </nav>
+        <h2> <Modal /></h2>
+        <section className="listMovies">
+          <ul>
+            {movie.map((movie, index) => (
+              <li key={index}>
+                <figure>
+                  {movie.image}
+                </figure>
+                <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+                <span>{movie.releaseDate}</span>
+                <h3>{movie.resume}</h3>
+              </li>
+            )
+            )}
 
-        </ul>
-      </section>
+          </ul>
+        </section>
+      </div>
     </div>
   )
 }
