@@ -1,17 +1,18 @@
 
 import { useState } from 'react'
 import './style.css'
+import { client } from '../../service/client'
+
 export const Modal = () => {
   let title = ''
   let subtitle = ''
   let resume = ''
   let data = ''
-  let imagem = ''
-  let diretor = ''
-  let escritor = ''
-  let classificacao = ''
+  let image = ''
+  let director = ''
+  let writer = ''
+  let classification = ''
   let studio = ''
-  let stars = ''
   const [toggle, setToggle] = useState(false)
   const handlerClick = () => {
     setToggle(!toggle)
@@ -29,29 +30,40 @@ export const Modal = () => {
     data = event.target.value
   }
   const handleChangeImagem = (event) => {
-    imagem = event.target.value
+    image = event.target.value
   }
   const handleChangeDiretor = (event) => {
-    diretor = event.target.value
+    director = event.target.value
   }
   const handleChangeEscritor = (event) => {
-    escritor = event.target.value
+    writer = event.target.value
   }
   const handleChangeClassific = (event) => {
-    classificacao = event.target.value
-  }
-
-  const handleChangeStars = (event) => {
-    stars = event.target.value
+    classification = event.target.value
   }
   const handleChangeStudio = (event) => {
     studio = event.target.value
   }
-  const submit = () => {
-    alert(`SALVANDO O NOVO FILME: ${title}`)
-    console.log(subtitle, resume, data, imagem, diretor, escritor, classificacao, studio, stars)
-  }
 
+  const submit = () => {
+    alert(`FILME ADICIONADO AO BANCO: ${title}`)
+    client.post(('/movie', {
+      title,
+      subtitle,
+      resume,
+      data,
+      image,
+      director,
+      writer,
+      classification,
+      studio,
+      gender: '',
+      actor: '',
+      awards: ''
+    }).then((response) => {
+      console.log(response.data)
+    }))
+  }
   return (
     <div className="tela">
       <nav>
@@ -85,7 +97,6 @@ export const Modal = () => {
               <input type="text" placeholder='classificação' onChange={handleChangeClassific} />
               <input type="text" placeholder='studio' onChange={handleChangeStudio} />
             </form>
-            <input type="text" placeholder='stars' className='resume' onChange={handleChangeStars} />
             <button onClick={submit} className='enviar'>enviar</button>
           </section>
         </div>)

@@ -16,11 +16,11 @@ export const Home = () => {
     <div className='container-pai'>
       <div className='container'>
         <nav className='navegacao'>
-          <div className='user'><h1>Hello User!</h1> </div>
-          <div className='movies'> <h2>All Movies</h2> </div>
+          <h1>Hello User!</h1>
+          <Modal />
         </nav>
-        <h2> <Modal /></h2>
         <section className="listMovies">
+          <h2>All Movies</h2>
           <ul>
             {movie.map((movie, index) => (
               <li key={index}>

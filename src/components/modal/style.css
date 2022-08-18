@@ -1,17 +1,22 @@
-.tela{
-  width: 100%;
+.tela {
+  justify-content: center;
+  width: 50%;
   height: 50%;
 }
-.abrir{
-  height: 0%;
+
+.abrir {
   margin-top: 0;
   background-color: plum;
   border: 1px solid white;
 
 }
-.modal input{
+
+.modal input {
   margin-top: 10px;
-  padding:20px;
+  padding: 20px;
+  border-radius: 20%;
+  border: 1px solid plum; 
+  color:black;
 }
 
 .modal {
@@ -32,7 +37,7 @@
   padding: 10px;
   border-radius: 3px;
   color: white;
-  background-color: rgb(5, 102, 222);
+  background-color: pink;
 }
 
 
@@ -42,51 +47,52 @@
 }
 
 .modal-container {
-  width: 100%;
+  width: 70%;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
   height: 100%;
   overflow: auto;
-justify-content: right
+  justify-content: right
 }
 
 .close {
   background-color: transparent;
   border: 0;
   padding: 0;
-  color: red;
+  color: purple;
   font-weight: 900;
   font-size: 20px;
   cursor: pointer;
 }
 
 .close:hover {
-  color: blue;
+  color: purple
 }
 
 nav {
   margin-top: 20%;
 }
- .enviar{
+
+.enviar {
   width: 100px;
-  background-color: burlywood;
-  color:black;
-  border-radius: 15px;
+  height: 0%;
+  margin-top: 0;
+  background-color: plum;
+  border: 1px solid white;
+
 }
 
 
-button:hover{
+button:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2)
-
 }
 
 .resume {
-  margin-top:10px;
-  padding-left:200px;
-  border-color: lightgrey;
+  margin-top: 10px;
+  padding-left: 200px;
 
 }
