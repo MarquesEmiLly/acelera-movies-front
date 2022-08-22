@@ -24,11 +24,7 @@ export const Home = () => {
           <ul>
             {movie.map((movie, index) => (
               <li key={index}>
-                <figure>
-                  {movie.image}
-                </figure>
                 <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-                <span>{movie.releaseDate}</span>
                 <h3>{movie.resume}</h3>
               </li>
             )

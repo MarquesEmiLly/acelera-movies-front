@@ -1,3 +1,10 @@
+.container-pai{
+  display:grid;
+  height: 100vh;
+  margin:2px;
+  grid-template-columns: 100%;
+  justify-content: center;
+}
 .container {
   margin: 30px;
   justify-content: center;
@@ -10,8 +17,6 @@ h1{
 .navegacao {
   display:block!important;
   width: 50%;
-  line-height: 0;
-  margin: 0px;
   display: grid;
   justify-content: space-between;
 }
@@ -24,8 +29,8 @@ h1{
   padding: 3px;
   box-shadow: 0 0 1em purple;
   border: 3px;
-  justify-content: center;
-  align-items: center;
+ justify-content: center;
+  
 
 }
 

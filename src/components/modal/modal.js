@@ -44,7 +44,6 @@ export const Modal = () => {
   const handleChangeStudio = (event) => {
     studio = event.target.value
   }
-
   const submit = () => {
     alert(`FILME ADICIONADO AO BANCO: ${title}`)
     client.post(('/movie', {
