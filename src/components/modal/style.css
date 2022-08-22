@@ -20,11 +20,10 @@
 }
 
 .modal {
+  padding-left: 100px;
   width: 50%;
-  border: 1px solid black;
   border-radius: 3px;
-  margin: auto 0;
-  box-shadow: 1px 3px 10px -3px black;
+  margin-top: 80px;
   display: block;
 
 }
@@ -76,11 +75,11 @@ nav {
 }
 
 .enviar {
+  margin-top: 20px;
   width: 100px;
   height: 0%;
-  margin-top: 0;
   background-color: plum;
-  border: 1px solid white;
+  border: 3px solid white;
 
 }
 
