@@ -1,18 +1,15 @@
+header {
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .movieId {
-  margin:50px;
-  display: grid;
-  max-height: 100%;
-  border: 1px solid plum;
-
-}
-h1{
-  width: 100%;
+  margin-top: 10%;
   height: 100%;
-}
-
-header{
-  background-color: aqua;
-  margin:5px;
+  width: 70%;
   display: grid;
-  justify-content: space-between;
+  margin-left: 100px;
+  background-color: pink;
+  box-shadow: 0 0 1em purple;
 }

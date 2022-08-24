@@ -1,12 +1,12 @@
-.container{
+.divmae{
   display: flex;
   justify-content: center;
   justify-items: center;
   padding-top: 10px;
 }
-.formLogin {
+
+.formLogin2{
   margin-top: 100px;
-  justify-content: center;
   width: 300px;
   height: 400px;
   padding: 10px;
@@ -14,24 +14,12 @@
   background-color: pink;
   box-shadow: 0 0 1em purple;
 }
-
+.inputLogin{
+  width: 200px;
+ }
 button{
   margin-top: 20px;
   width: 200px;
   box-shadow: 0 0 1em purple;
   background-color: white;
-}
- .inputLogin{
-  width: 200px;
- }
-input:hover{
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2)
-}
-button:hover{
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2)
-  
 }

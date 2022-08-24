@@ -6,7 +6,7 @@
 
 .abrir {
   margin-top: 0;
-  background-color: plum;
+  box-shadow: 0 0 1em purple;
   border: 1px solid white;
 
 }
