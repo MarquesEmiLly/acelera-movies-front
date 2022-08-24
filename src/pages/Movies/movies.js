@@ -15,6 +15,7 @@ export const Movies = () => {
   }, [])
 
   return (
+    <>
     <div className='movieId'>
       <header>
         <h1>{movie.title}</h1>
@@ -27,5 +28,9 @@ export const Movies = () => {
         <li>Resumo:{movie.resume}</li>
       </ul>
     </div>
+    <footer>
+      <p>Obrigada por acessar os filmes da Emilly</p>
+    </footer>
+    </>
   )
 }

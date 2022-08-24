@@ -1,23 +1,29 @@
-.divmae{
-  display: flex;
+.divmae {
+  display: grid;
   justify-content: center;
   justify-items: center;
   padding-top: 10px;
 }
 
-.formLogin2{
+header {
+  display: grid;
+}
+
+.formLogin2 {
   margin-top: 100px;
   width: 300px;
   height: 400px;
   padding: 10px;
-  display:inline-block;
+  display: inline-block;
   background-color: pink;
   box-shadow: 0 0 1em purple;
 }
-.inputLogin{
+
+.inputLogin {
   width: 200px;
- }
-button{
+}
+
+button {
   margin-top: 20px;
   width: 200px;
   box-shadow: 0 0 1em purple;

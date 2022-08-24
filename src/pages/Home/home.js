@@ -13,26 +13,31 @@ export const Home = () => {
   }, [])
 
   return (
-    <div className='container-pai'>
-      <div className='container'>
-        <nav className='navegacao'>
-          <h1>Hello User!</h1>
-          <Modal />
-        </nav>
-        <section className="listMovies">
-          <h2>All Movies</h2>
-          <ul>
-            {movie.map((movie, index) => (
-              <li key={index}>
-                <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-                <h3>{movie.resume}</h3>
-              </li>
-            )
-            )}
+    <>
+      <div className='container-pai'>
+        <div className='container'>
+          <nav className='navegacao'>
+            <h1>Hello User!</h1>
+            <Modal />
+          </nav>
+          <section className="listMovies">
+            <h2>All Movies</h2>
+            <ul>
+              {movie.map((movie, index) => (
+                <li key={index}>
+                  <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+                  <h3>{movie.resume}</h3>
+                </li>
+              )
+              )}
 
-          </ul>
-        </section>
+            </ul>
+          </section>
+        </div>
       </div>
-    </div>
+      <footer className='home'>
+        <p>Obrigada por acessar os filmes da Emilly</p>
+      </footer>
+    </>
   )
 }

@@ -1,10 +1,11 @@
-.container-pai{
-  display:grid;
+.container-pai {
+  display: grid;
   height: 100vh;
-  margin:2px;
+  margin: 2px;
   grid-template-columns: 100%;
   padding-right: 200px;
 }
+
 .container {
   margin: 30px;
 
@@ -25,7 +26,7 @@
   padding: 3px;
   box-shadow: 0 0 1em purple;
   border: 3px;
- justify-content: center;
+  justify-content: center;
 
 }
 
@@ -45,4 +46,11 @@ h2 {
   margin: 0%;
   margin-top: 0%;
   justify-content: space-around;
+}
+
+.home p {
+  margin-top: 10px;;
+  height: 100%;
+  width: 30%;
+  box-shadow: 0 0 1em purple;
 }

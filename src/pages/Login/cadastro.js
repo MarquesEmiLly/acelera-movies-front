@@ -27,7 +27,9 @@ export const Login = () => {
     // console.log('mudou senha')
   }
   return (
+    <>
 <section className="container">
+  <h1>Acelera Movies</h1>
   <form className='formLogin'>
     <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" className='inputLogin' ></input><br></br>
     <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha" className='inputLogin'></input>
@@ -35,6 +37,9 @@ export const Login = () => {
     <button onClick={handlerClick} type="button">Entrar</button>
   </form>
 </section>
-
+<footer>
+  <p>Obrigada por acessar os filmes da Emilly</p>
+  </footer>
+</>
   )
 }
