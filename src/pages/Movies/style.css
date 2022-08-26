@@ -1,6 +1,7 @@
-header {
-  margin: 5px;
-  display: flex;
+.topo {
+  margin-top: 50px;
+  display: inline-block;
+  margin-left: 100px;
   justify-content: space-around;
 }
 
@@ -13,3 +14,4 @@ header {
   background-color: pink;
   box-shadow: 0 0 1em purple;
 }
+

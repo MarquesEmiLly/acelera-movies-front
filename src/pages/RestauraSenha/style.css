@@ -29,3 +29,7 @@ button {
   box-shadow: 0 0 1em purple;
   background-color: white;
 }
+footer{
+  justify-content: center;
+  align-items:center ;
+}

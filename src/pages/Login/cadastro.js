@@ -18,8 +18,12 @@ export const Login = () => {
     // console.log(response.data)
     // })
   }
-  const handlerChangeLogin = (event) => {
+  const handlerChangeLogin = (event, email) => {
     saveLogin = event.target.value
+    const re = /\S+@\S+\.\S+/
+    if (re === true) {
+      return re.test(email)
+    }
   }
 
   const handlerChangePassword = (event) => {
@@ -28,18 +32,18 @@ export const Login = () => {
   }
   return (
     <>
-<section className="container">
-  <h1>Acelera Movies</h1>
-  <form className='formLogin'>
-    <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" className='inputLogin' ></input><br></br>
-    <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha" className='inputLogin'></input>
-    <Link to={'/restaurar'}><u>esqueceu sua senha?</u></Link> <br></br>
-    <button onClick={handlerClick} type="button">Entrar</button>
-  </form>
-</section>
-<footer>
-  <p>Obrigada por acessar os filmes da Emilly</p>
-  </footer>
-</>
+      <section className="container">
+        <h1>Acelera Movies</h1>
+        <form className='formLogin'>
+          <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" className='inputLogin' ></input><br></br>
+          <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha" className='inputLogin'></input>
+          <Link to={'/restaurar'}><u>esqueceu sua senha?</u></Link> <br></br>
+          <button onClick={handlerClick} type="button">Entrar</button>
+        </form>
+      </section>
+      <footer>
+        <p>Obrigada por acessar os filmes da Emilly</p>
+      </footer>
+    </>
   )
 }

@@ -44,3 +44,7 @@ p {
   width: 30%;
   box-shadow: 0 0 1em purple;
 }
+footer{
+  justify-content: center;
+  align-items:center ;
+}

@@ -38,10 +38,9 @@ export const Restaura = (num) => {
     <section className='divmae'>
       <header>
       <h1>RESTAURE AQUI</h1>
-     <h2>senha sugreid</h2>
       </header>
       <form className='formLogin2'>
-        <label>Login</label><input type="email" placeholder="Email@email.com" value={email} className='inputLogin' onChange={handlerChangeLogin} ></input><br></br>
+        <label>Login</label><input type="email" className='inputLogin' onChange={handlerChangeLogin} ></input><br></br>
         <input type="current-password" placeholder="senha" className='inputLogin' onChange={handlerChangePassword}></input><br></br>
         <input type="current-password" placeholder="repita" className='inputLogin' onChange={handlerConfirm}></input>
         <button type="button" onClick={handlerClick}>Entrar</button>
