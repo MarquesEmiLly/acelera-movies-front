@@ -5,35 +5,29 @@ import '../Login/style.css'
 
 export const Login = () => {
   let saveLogin = ''
-  let password = ''
+  let password = 123
   const navigate = useNavigate()
 
   const handlerClick = (e) => {
     client.post('/login', { saveLogin, password }).then(function (response) {
-      navigate('/movies')
       console.log(response.data)
+      navigate('/movies')
     })
-
-    // client.get('/movies').then(function (response) {
-    // console.log(response.data)
-    // })
   }
   const handlerChangeLogin = (event) => {
     saveLogin = event.target.value
-    saveLogin.map()
   }
 
   const handlerChangePassword = (event) => {
     password = event.target.value
-    // console.log('mudou senha')
   }
   return (
     <>
       <section className="container">
         <h1>Acelera Movies</h1>
         <form className='formLogin'>
-          <label>Login</label><input onChange={handlerChangeLogin} type="email" placeholder="email" className='inputLogin' ></input><br></br>
-          <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha" className='inputLogin'></input>
+          <label>Login</label><input onChange={handlerChangeLogin} type="email" id='email' placeholder="email" className='inputLogin' ></input><br></br>
+          <label>Password</label><input onChange={handlerChangePassword} type="password" placeholder="senha" className='inputLogin'></input>
           <Link to={'/restaurar'}><u>esqueceu sua senha?</u></Link> <br></br>
           <button onClick={handlerClick} type="button">Entrar</button>
         </form>

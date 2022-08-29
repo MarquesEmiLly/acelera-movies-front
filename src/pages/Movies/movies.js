@@ -14,7 +14,11 @@ export const Movies = () => {
     })
   }, [])
   const delet = () => {
-    navigate('/home')
+    client.delete(`/movies/${id}`).then((response) => {
+      alert('excluindo')
+      navigate('/movies')
+      console.log(response.data)
+    })
   }
 
   const edit = () => {
@@ -30,8 +34,11 @@ export const Movies = () => {
       <div className='movieId'>
         <ul>
           <li>Filme selecionado: {movie.title}</li>
-          <li>Studio: {movie.studio}</li>
+          <li>subtitle: {movie.subtitle}</li>
           <li>Resumo:{movie.resume}</li>
+          <li>Studio: {movie.studio}</li>
+          <li>classification: {movie.classification}</li>
+          <li>director: {movie.director}</li>
         </ul>
       </div>
     </>
