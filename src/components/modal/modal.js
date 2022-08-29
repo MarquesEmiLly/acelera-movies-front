@@ -14,9 +14,6 @@ export const Modal = () => {
   let classification = ''
   let studio = ''
   const [toggle, setToggle] = useState(false)
-  const handlerClick = () => {
-    setToggle(!toggle)
-  }
   const handleChangeTitle = (event) => {
     title = event.target.value
   }
@@ -46,22 +43,26 @@ export const Modal = () => {
   }
   const submit = () => {
     alert(`FILME ADICIONADO AO BANCO: ${title}`)
-    client.post(('/movie', {
+    client.post('/movies', {
       title,
       subtitle,
       resume,
-      data,
+      releaseDate: data,
       image,
       director,
       writer,
       classification,
       studio,
-      gender: '',
-      actor: '',
-      awards: ''
+      gender: 'action',
+      actor: 'fulano',
+      awards: 'oscar',
+      note: '0'
     }).then((response) => {
       console.log(response.data)
-    }))
+    })
+  }
+  const handlerClick = () => {
+    setToggle(toggle => !toggle)
   }
   return (
     <div className="tela">
@@ -76,7 +77,7 @@ export const Modal = () => {
               <button onClick={handlerClick} className="close">x</button>
             </header>
             <form className='form1'>
-              <input type="text" placeholder='Title' onChange={handleChangeTitle} />
+              <input type="text" placeholder='title' onChange={handleChangeTitle} />
               <input type="text" placeholder='subtitle' onChange={handleChangeSubtitle} />
             </form>
             <br></br>

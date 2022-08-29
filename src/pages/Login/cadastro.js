@@ -18,12 +18,9 @@ export const Login = () => {
     // console.log(response.data)
     // })
   }
-  const handlerChangeLogin = (event, email) => {
+  const handlerChangeLogin = (event) => {
     saveLogin = event.target.value
-    const re = /\S+@\S+\.\S+/
-    if (re === true) {
-      return re.test(email)
-    }
+    saveLogin.map()
   }
 
   const handlerChangePassword = (event) => {
