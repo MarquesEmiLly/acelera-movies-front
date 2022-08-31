@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Modal } from '../../components/modal/modal'
 import { client } from '../../service/client'
 import './style.css'
+import { Modal } from '../../components/modal/modal'
 
 export const Home = () => {
   const [movie, setMovie] = useState([])

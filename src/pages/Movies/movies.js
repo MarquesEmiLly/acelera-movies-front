@@ -1,5 +1,6 @@
 
 import { navigate } from '@storybook/addon-links'
+import { edit } from 'fontawesome'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { client } from '../../service/client'
@@ -15,21 +16,22 @@ export const Movies = () => {
   }, [])
   const delet = () => {
     client.delete(`/movies/${id}`).then((response) => {
-      alert('excluindo')
+      alert('de um refresh')
       navigate('/movies')
       console.log(response.data)
     })
   }
 
-  const edit = () => {
-    alert('editando dados.....')
-  }
   return (
     <>
       <nav className='topo'>
         <h1>{movie.title}</h1>
-        <button onClick={edit}>editar filme</button> <br></br>
-        <button onClick={delet}>deletar filme</button>
+        <figure>
+          <button onClick={delet}><img src='https://as2.ftcdn.net/v2/jpg/04/68/08/01/1000_F_468080117_4IKU7gbXt8YcTcleuqWIlFo0XvJxrrjN.jpg' />
+          </button>
+          <button onClick={edit}><img src='https://as2.ftcdn.net/v2/jpg/03/96/92/71/1000_F_396927161_Am6aMm5fqlNeAFxPE2Gw5KjATUnJ7ac8.jpg' />
+          </button>
+        </figure>
       </nav>
       <div className='movieId'>
         <ul>
