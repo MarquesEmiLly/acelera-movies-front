@@ -73,7 +73,7 @@ export const Modal = () => {
         <div className="modal-container">
           <section className="modal">
             <header>
-              <h2>MODAL DA EMILLY</h2>
+              <h2>add Movie</h2>
               <button onClick={handlerClick} className="close">x</button>
             </header>
             <form className='form1'>

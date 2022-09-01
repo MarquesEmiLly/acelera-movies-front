@@ -1,8 +1,8 @@
 
 import { navigate } from '@storybook/addon-links'
-import { edit } from 'fontawesome'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import { ModalForm } from '../../components/componentes/modalForm'
 import { client } from '../../service/client'
 import './style.css'
 
@@ -29,9 +29,8 @@ export const Movies = () => {
         <figure>
           <button onClick={delet}><img src='https://as2.ftcdn.net/v2/jpg/04/68/08/01/1000_F_468080117_4IKU7gbXt8YcTcleuqWIlFo0XvJxrrjN.jpg' />
           </button>
-          <button onClick={edit}><img src='https://as2.ftcdn.net/v2/jpg/03/96/92/71/1000_F_396927161_Am6aMm5fqlNeAFxPE2Gw5KjATUnJ7ac8.jpg' />
-          </button>
         </figure>
+        <ModalForm />
       </nav>
       <div className='movieId'>
         <ul>
