@@ -5,16 +5,23 @@
   justify-content: space-around;
 }
 
+.retornar {
+  margin-top: 0%;
+  margin-left: 87%;
+}
+
 .movieId {
-  margin-top: 10%;
+  margin-top: 5%;
   height: 100%;
   width: 70%;
+  margin-right: 300px;
   display: grid;
   margin-left: 100px;
   background-color: pink;
   box-shadow: 0 0 1em purple;
 }
-figure{
+
+figure {
   display: grid;
 }
 

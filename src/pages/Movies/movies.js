@@ -1,13 +1,12 @@
-
-import { navigate } from '@storybook/addon-links'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { ModalForm } from '../../components/componentes/modalForm'
 import { client } from '../../service/client'
 import './style.css'
 
 export const Movies = () => {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [movie, setMovie] = useState([])
   useEffect(() => {
     client.get(`/movies/${id}`).then((response) => {
@@ -21,17 +20,23 @@ export const Movies = () => {
       console.log(response.data)
     })
   }
+  const navega = () => {
+    navigate('/movies')
+  }
 
   return (
     <>
-      <nav className='topo'>
+    <nav className='retornar'>
+    <button onClick={navega}><img src='https://cdn-icons-png.flaticon.com/512/3586/3586008.png'></img></button>
+    </nav>
+      <header className='topo'>
         <h1>{movie.title}</h1>
         <figure>
           <button onClick={delet}><img src='https://as2.ftcdn.net/v2/jpg/04/68/08/01/1000_F_468080117_4IKU7gbXt8YcTcleuqWIlFo0XvJxrrjN.jpg' />
           </button>
         </figure>
         <ModalForm />
-      </nav>
+      </header>
       <div className='movieId'>
         <ul>
           <li>Filme selecionado: {movie.title}</li>
