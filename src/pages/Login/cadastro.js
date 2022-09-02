@@ -8,26 +8,28 @@ export const Login = () => {
   let password = 123
   const navigate = useNavigate()
 
+  const handlerChangePassword = (event) => {
+    password = event.target.value
+  }
   const handlerClick = (e) => {
-    client.post('/login', { saveLogin, password }).then(function (response) {
+    client.get('/login', { saveLogin, password }).then(function (response) {
       console.log(response.data)
+      if (saveLogin && password === null) {
+        return alert('vazio')
+      }
       navigate('/movies')
     })
   }
   const handlerChangeLogin = (event) => {
     saveLogin = event.target.value
   }
-
-  const handlerChangePassword = (event) => {
-    password = event.target.value
-  }
   return (
     <>
       <section className="container">
         <h1>Acelera Movies</h1>
         <form className='formLogin'>
-          <label>Login</label><input onChange={handlerChangeLogin} type="email" id='email' placeholder="email" className='inputLogin' ></input><br></br>
-          <label>Password</label><input onChange={handlerChangePassword} type="password" placeholder="senha" className='inputLogin'></input>
+          <label>Login</label><input onChange={handlerChangeLogin} type="email" id='email' placeholder="email" className='inputLogin' required></input><br></br>
+          <label>Password</label><input onChange={handlerChangePassword} type="current-password" placeholder="senha" className='inputLogin' required></input>
           <Link to={'/restaurar'}><u>esqueceu sua senha?</u></Link> <br></br>
           <button onClick={handlerClick} type="button">Entrar</button>
         </form>
