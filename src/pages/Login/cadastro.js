@@ -14,10 +14,7 @@ export const Login = () => {
   const handlerClick = (e) => {
     client.get('/login', { saveLogin, password }).then(function (response) {
       console.log(response.data)
-      if (saveLogin && password === null) {
-        return alert('vazio')
-      }
-      navigate('/movies')
+      return navigate('/movies')
     })
   }
   const handlerChangeLogin = (event) => {
